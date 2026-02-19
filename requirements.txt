@@ -1,0 +1,38 @@
+# ── Repo-Mind dependencies ──────────────────────────────────────────────────
+#
+# Install everything with:
+#   pip install -r requirements.txt
+#
+# Python ≥ 3.10 is required.
+# For GPU-accelerated embedding inference, replace the cpu torch build with
+# the appropriate CUDA or MPS wheel from https://pytorch.org/get-started.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Frontend
+streamlit>=1.35.0
+
+# LangChain core
+langchain>=0.2.16
+langchain-core>=0.2.39
+langchain-community>=0.2.16
+langchain-text-splitters>=0.2.4
+
+# LLM integrations
+langchain-openai>=0.1.23          # OpenAI fallback
+langchain-ollama>=0.1.3           # Local Ollama (Llama 3) – primary backend
+
+# Embeddings
+langchain-huggingface>=0.0.3
+sentence-transformers>=3.0.1
+
+# Vector store
+chromadb>=0.5.3
+
+# HTTP client (used for Ollama health-check probe)
+httpx>=0.27.0
+
+# tree-sitter language grammars required by LanguageParser
+# tree-sitter-languages bundles pre-compiled grammars for 100+ languages,
+# including Python and JavaScript, so no system-level build tools are needed.
+tree-sitter>=0.21.3
+tree-sitter-languages>=1.10.2
